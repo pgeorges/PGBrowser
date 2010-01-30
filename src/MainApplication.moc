@@ -1,0 +1,99 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'MainApplication.h'
+**
+** Created: Sun Jan 31 01:09:01 2010
+**      by: The Qt Meta Object Compiler version 61 (Qt 4.5.3)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'MainApplication.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 61
+#error "This file was generated using the moc from 4.5.3. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_MainApplication[] = {
+
+ // content:
+       2,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      10,   12, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+
+ // slots: signature, parameters, type, tag, flags
+      26,   17,   16,   16, 0x0a,
+      54,   47,   16,   16, 0x0a,
+      72,   47,   16,   16, 0x0a,
+      99,   94,   16,   16, 0x0a,
+     147,  138,   16,   16, 0x0a,
+     178,  173,   16,   16, 0x0a,
+     202,  200,   16,   16, 0x08,
+     263,  200,   16,   16, 0x08,
+     320,   16,   16,   16, 0x08,
+     355,  347,   16,   16, 0x08,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_MainApplication[] = {
+    "MainApplication\0\0homePage\0"
+    "setHomePage(QString)\0status\0"
+    "setOpenInTab(int)\0setPluginDefault(int)\0"
+    "type\0setProxyType(QNetworkProxy::ProxyType)\0"
+    "hostName\0setProxyHostName(QString)\0"
+    "port\0setProxyPort(quint16)\0,\0"
+    "onProxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)\0"
+    "onAuthenticationRequired(QNetworkReply*,QAuthenticator*)\0"
+    "onFinished(QNetworkReply*)\0message\0"
+    "onMessageReceived(QString)\0"
+};
+
+const QMetaObject MainApplication::staticMetaObject = {
+    { &QtSingleApplication::staticMetaObject, qt_meta_stringdata_MainApplication,
+      qt_meta_data_MainApplication, 0 }
+};
+
+const QMetaObject *MainApplication::metaObject() const
+{
+    return &staticMetaObject;
+}
+
+void *MainApplication::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_MainApplication))
+        return static_cast<void*>(const_cast< MainApplication*>(this));
+    return QtSingleApplication::qt_metacast(_clname);
+}
+
+int MainApplication::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QtSingleApplication::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: setHomePage((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: setOpenInTab((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: setPluginDefault((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: setProxyType((*reinterpret_cast< QNetworkProxy::ProxyType(*)>(_a[1]))); break;
+        case 4: setProxyHostName((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 5: setProxyPort((*reinterpret_cast< quint16(*)>(_a[1]))); break;
+        case 6: onProxyAuthenticationRequired((*reinterpret_cast< const QNetworkProxy(*)>(_a[1])),(*reinterpret_cast< QAuthenticator*(*)>(_a[2]))); break;
+        case 7: onAuthenticationRequired((*reinterpret_cast< QNetworkReply*(*)>(_a[1])),(*reinterpret_cast< QAuthenticator*(*)>(_a[2]))); break;
+        case 8: onFinished((*reinterpret_cast< QNetworkReply*(*)>(_a[1]))); break;
+        case 9: onMessageReceived((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        default: ;
+        }
+        _id -= 10;
+    }
+    return _id;
+}
+QT_END_MOC_NAMESPACE

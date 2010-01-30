@@ -1,0 +1,56 @@
+#include "LocationBar.h"
+#include <boost/regex.hpp> 
+
+// LocationBar
+LocationBar::LocationBar(QWidget *parent)
+ : QLineEdit(parent)
+{
+}
+
+LocationBar::~LocationBar()
+{
+}
+
+void LocationBar::keyPressEvent(QKeyEvent *event)
+{
+  QString url = text().trimmed();
+
+	if (event->key() == Qt::Key_Return)
+	{
+		if (event->modifiers() & Qt::ControlModifier)
+		{
+			if (url.length() > 0)
+			{
+				if (url.toLower().indexOf("http://") != 0)
+				{
+					url = "http://" + url;
+				}
+				if (url.toLower().indexOf("www.") != 7)
+				{
+					url.insert(7, "www.");
+				}
+				
+				int ind = url.indexOf('.', 12);
+				if (ind == -1)
+				{
+					url += ".com/";
+				}
+				else
+        {
+					if (ind == url.length() - 1)
+						url += "com/";
+        }
+			}
+		}
+    boost::regex expression("^(file|ftp|http|https)://");
+    if (!boost::regex_search(url.toStdString(), expression))
+      url = QString("http://") + url;
+
+    setText(url);
+	}
+
+	QLineEdit::keyPressEvent(event);
+}
+
+#include "LocationBar.moc"
+
