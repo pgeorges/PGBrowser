@@ -372,5 +372,4 @@ void MenuBar::bookmarkTriggered(bool checked)
     currentWindow()->tabWidget()->addNewTab(bookmark->url);
 }
 
-#include "MenuBar.moc"
 

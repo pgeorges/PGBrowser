@@ -47,5 +47,4 @@ void BookmarksToolBar::bookmarkTriggered(bool checked)
   emit bookmarkTriggered(bookmark->url);
 }
 
-#include "BookmarksToolBar.moc"
 

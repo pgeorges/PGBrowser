@@ -52,5 +52,3 @@ void LocationBar::keyPressEvent(QKeyEvent *event)
     QLineEdit::keyPressEvent(event);
 }
 
-#include "LocationBar.moc"
-

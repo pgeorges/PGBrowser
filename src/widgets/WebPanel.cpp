@@ -138,5 +138,4 @@ void WebPanel::setTabStatus()
   m_tabWidget->setTabToolTip(this, toolTipStr);
 }
 
-#include "WebPanel.moc"
 

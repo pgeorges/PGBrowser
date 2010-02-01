@@ -211,4 +211,3 @@ void PreferencesDialog::setProxyPort(const QString& port)
   application->setProxyPort(port.toShort());
 }
 
-#include "PreferencesDialog.moc"

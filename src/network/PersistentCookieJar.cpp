@@ -34,5 +34,4 @@ void PersistentCookieJar::loadState()
   setAllCookies(QNetworkCookie::parseCookies(cookieData));
 }
 
-#include "PersistentCookieJar.moc"
 

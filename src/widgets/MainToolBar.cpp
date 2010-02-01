@@ -223,5 +223,4 @@ void MainToolBar::setStopButtonDisabled(bool disabled)
   m_stopButton->setDisabled(disabled);
 }
 
-#include "MainToolBar.moc"
 

@@ -204,5 +204,4 @@ void MainWindow::onTabChanged(WebPanel* webPanel)
   mainToolBar()->progressBarAction()->setVisible(false);
 }
 
-#include "MainWindow.moc"
 

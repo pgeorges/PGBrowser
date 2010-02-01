@@ -55,5 +55,3 @@ void AddBookmarkDialog::onAdd()
   close();
 }
 
-#include "AddBookmarkDialog.moc"
-

@@ -7,6 +7,7 @@
 #include <QtCore/QUrl>
 
 class MainWindow;
+class WebPanel;
 
 class TabWidget : public QTabWidget
 {

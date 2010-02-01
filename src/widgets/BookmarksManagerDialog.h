@@ -6,6 +6,8 @@
 #include <QtGui/QLineEdit>
 #include <QtGui/QTreeWidget>
 
+class Bookmark;
+
 class BookmarksManagerDialog : public QDialog
 {
   Q_OBJECT

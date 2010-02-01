@@ -15,5 +15,4 @@ QSize TabBar::tabSizeHint(int index)
   return QSize(baseSize.width() + 50, baseSize.height());
 }
 
-#include "TabBar.moc"
 

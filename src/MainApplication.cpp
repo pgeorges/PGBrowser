@@ -233,5 +233,3 @@ void MainApplication::onMessageReceived(const QString& message)
   MainWindow* window = dynamic_cast<MainWindow*>(activationWindow());
   window->tabWidget()->addNewTab(QUrl(message), true);
 }
-
-#include "MainApplication.moc"

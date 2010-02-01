@@ -179,5 +179,3 @@ void BookmarksManagerDialog::onDeleteBookmark()
   */
 }
 
-#include "BookmarksManagerDialog.moc"
-

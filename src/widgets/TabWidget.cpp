@@ -118,5 +118,4 @@ void TabWidget::createContextMenu(const QPoint& pos)
 {
 }
 
-#include "TabWidget.moc"
 

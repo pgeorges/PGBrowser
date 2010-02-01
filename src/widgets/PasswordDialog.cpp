@@ -69,5 +69,4 @@ void PasswordDialog::closeEvent(QCloseEvent* event)
 {
 }
 
-#include "PasswordDialog.moc"
 
