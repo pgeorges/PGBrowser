@@ -24,8 +24,17 @@ QT4_WRAP_CPP( pgbrowser_MOC_SOURCES ${pgbrowser_HEADERS} )
 
 add_executable(pgbrowser 
                ${pgbrowser_SOURCES} 
-               ${pgbrowser_MOC_SOURCES})
+               ${pgbrowser_MOC_SOURCES}
+)
+
+set_target_properties( pgbrowser 
+		       PROPERTIES RUNTIME_OUTPUT_DIRECTORY  
+		       ${PGBROWSER_SOURCE_DIR}
+)
 
 target_link_libraries(pgbrowser 
 		      qtsingleapp 
-		      ${QT_LIBRARIES})
+		      ${QT_LIBRARIES}
+)
+
+
