@@ -116,7 +116,9 @@ void WebPanel::onIconChange()
 void WebPanel::onUrlChange(const QUrl& url)
 {
   if (m_tabWidget->isSelectedWidget(this))
-    m_window->setLocationBarText(url.toString());
+    if (!m_window->mainToolBar()->locationBar()->hasFocus() or
+        m_window->mainToolBar()->locationBar()->text().isEmpty())
+      m_window->setLocationBarText(url.toString());
 }
 
 void WebPanel::onDownloadRequested(const QNetworkRequest& request)
