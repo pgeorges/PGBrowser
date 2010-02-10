@@ -94,6 +94,7 @@ void MainWindow::setupFindToolBar()
   QLabel* findLabel = new QLabel("Find Text: ");
   m_findLineEdit = new QLineEdit();
   m_findLineEdit->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+  m_findLineEdit->setFocusPolicy(Qt::ClickFocus);
   connect(m_findLineEdit, SIGNAL(textChanged(const QString&)),
           this, SLOT(setFindText(const QString&)));
 
@@ -110,6 +111,7 @@ void MainWindow::setupFindToolBar()
   closeButton->setFlat(true);
   closeButton->setFixedSize(buttonSize);
   closeButton->setIconSize(iconSize);
+  closeButton->setFocusPolicy(Qt::ClickFocus);
   connect(closeButton, SIGNAL(released()), this, SLOT(closeFindToolBar()));
 
   m_findToolBar->addWidget(findLabel);

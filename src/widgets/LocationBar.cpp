@@ -1,4 +1,5 @@
 #include "LocationBar.h"
+#include <QtCore/QString>
 
 // LocationBar
 LocationBar::LocationBar(QWidget *parent)
@@ -16,10 +17,10 @@ void LocationBar::keyPressEvent(QKeyEvent *event)
 
     if (event->key() == Qt::Key_Return)
     {
-        if (url.toLower().indexOf("http://") != 0 ||
-            url.toLower().indexOf("https://") != 0 ||
-            url.toLower().indexOf("ftp://") != 0 ||
-            url.toLower().indexOf("file://") != 0)
+        if (!url.contains("http://", Qt::CaseInsensitive) &&
+            !url.contains("https://", Qt::CaseInsensitive) &&
+            !url.contains("ftp://", Qt::CaseInsensitive) &&
+            !url.contains("file://", Qt::CaseInsensitive))
         {
             url = "http://" + url;
         }

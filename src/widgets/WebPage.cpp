@@ -24,9 +24,6 @@ WebPage::~WebPage()
 
 void WebPage::onLinkHovered(const QString& link, const QString& title, const QString& textContent)
 {
-//  if (link.isEmpty())
-//    QToolTip::hideText();
-//  else
   QString tooltip = link;
   if (tooltip.length() > 80)
   {
@@ -67,12 +64,10 @@ bool WebPage::acceptNavigationRequest(QWebFrame* frame, const QNetworkRequest& r
 {
   if (type == QWebPage::NavigationTypeLinkClicked && m_currentButtons == Qt::MidButton)
   {
-    qDebug() << QString("navigation request (new tab): ") << request.url();
     m_tabWidget->addNewTab(request.url());
     return false;
   }
 
-  qDebug() << QString("accept navigation request") << request.url();
   return QWebPage::acceptNavigationRequest(frame, request, type);
 }
 
